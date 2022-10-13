@@ -30,4 +30,24 @@
 * __Variables = camelCase__
 * __Methods = camelCase__
 * __Functions = camelCase__
-* __JSON Attributest = snake_case__
+* __JSON Attributes = snake_case__
+
+
+### Creating a user
+we can create a user form post man with 
+by sending a request with a body to the 
+url of the __root project (be it localhost)/oauth/token__
+
+## __Body__:
+__grant_type : password__
+
+__client_id : token id (client id).__
+
+__client_secret : token generated.__
+
+__username : email of the user created.__
+
+__password : password of the user created__
+
+
+
