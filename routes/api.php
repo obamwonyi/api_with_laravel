@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+//adding a middleware to the route 
+//and it's also nice to add a version prefix to the 
+//api you created . 
 Route::middleware("auth:api")->prefix('v1')->group(function()
 {
      Route::get('/user',function(Request $request)
      {
         return $request->user();
      });
+
+     Route::get('/authors/{author}',[AuthorsController::class,'show']);
 });
+

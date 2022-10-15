@@ -48,6 +48,21 @@ class AuthorsController extends Controller
     public function show(Author $author)
     {
         //
+        return response()->json(
+            [
+                'data' => 
+                [
+                    'id' => $author->id, 
+                    'type' => 'Authors', 
+                    'attributes' => 
+                    [
+                        'name' => $author->name, 
+                        'created_at' => $author->created_at, 
+                        'updated_at' => $author->updated_at
+                    ]
+                ]
+            ]
+        );
     }
 
     /**
