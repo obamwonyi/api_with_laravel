@@ -48,6 +48,8 @@ class AuthorsController extends Controller
     public function show(Author $author)
     {
         //
+        //returning the data in json format 
+        //using the response() method 
         return response()->json(
             [
                 'data' => 
