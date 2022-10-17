@@ -25,6 +25,7 @@ Route::middleware("auth:api")->prefix('v1')->group(function()
         return $request->user();
      });
 
-     Route::get('/authors/{author}',[AuthorsController::class,'show']);
+
+     Route::resource('/authors',AuthorsController::class);
 });
 
