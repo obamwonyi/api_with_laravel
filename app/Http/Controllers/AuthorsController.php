@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AuthorsRequest;
 use App\Http\Requests\StoreAuthorRequest;
 use App\Http\Requests\UpdateAuthorRequest;
 use App\Http\Resources\AuthorsResource;
@@ -44,7 +45,7 @@ class AuthorsController extends Controller
     //     return "test";
     // }
 
-    public function store(Request $request)
+    public function store(AuthorsRequest $request)
     {
         //always rememver to specify the number 
         //items it should create at a time . 
@@ -99,7 +100,7 @@ class AuthorsController extends Controller
 
     //     return new AuthorsResource($author);
     // }
-    public function update(Request $request, Author $author)
+    public function update(AuthorsRequest $request, Author $author)
     {
         //
         $author->update(
